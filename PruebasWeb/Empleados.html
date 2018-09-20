@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="Scripts/jquery-1.10.2.js"></script>
+    <script>
+        $(document).ready(function () {
+            var empleados = $('#ulEmpleados');
+            $('#btn').click(function () {
+                var username = $('#txtUsername').val();
+                var password = $('#txtPassword').val();
+                console.log(username + ':' + password);
+                console.log(btoa(username + ':' + password));
+
+                $.ajax({
+                    type: 'GET',
+                    url: 'api/Empleados/',
+                    dataType: 'json',
+                    headers: {
+                        'Authorization': 'Basic ' + btoa(username + ':' + password)
+                    },
+                    success: function (data) {
+                        empleados.empty();
+                        $.each(data, function (index, val) {
+                            var nombreCompleto = val.Nombre + ' ' + val.ApellidoPaterno + ' ' + val.ApellidoMaterno;
+                            empleados.append('<li>' + nombreCompleto + ' (' + val.Puesto + ')</li>');
+                        });
+                    },
+                    complete: function (jqXHR) {
+                        if (jqXHR.status == '401') {
+                            empleados.empty();
+                            empleados.append('<li style="color:red;">' + jqXHR.status + ' : ' + jqXHR.statusText + '</li>');
+                        }
+                    }
+                });
+            });
+            $('#btnLimpiar').click(function () {
+                empleados.empty();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        Username: <input id="txtUsername" type="text" />
+        Password: <input id="txtPassword" type="password" />
+        <br /><br />
+        <input id="btn" type="button" value="Autenticarse y obtener empleados" />
+        <input id="btnLimpiar" type="button" value="Limpiar" />
+        <ul id="ulEmpleados"></ul>
+    </div>
+</body>
+</html>

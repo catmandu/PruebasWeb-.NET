@@ -1,0 +1,10 @@
+c:\users\developer.acerv5-400\documents\visual studio 2013\Projects\PruebasWeb\DataAccess\bin\Debug\DataAccess.dll.config
+c:\users\developer.acerv5-400\documents\visual studio 2013\Projects\PruebasWeb\DataAccess\bin\Debug\DataAccess.dll
+c:\users\developer.acerv5-400\documents\visual studio 2013\Projects\PruebasWeb\DataAccess\bin\Debug\DataAccess.pdb
+c:\users\developer.acerv5-400\documents\visual studio 2013\Projects\PruebasWeb\DataAccess\bin\Debug\EntityFramework.dll
+c:\users\developer.acerv5-400\documents\visual studio 2013\Projects\PruebasWeb\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\developer.acerv5-400\documents\visual studio 2013\Projects\PruebasWeb\DataAccess\bin\Debug\EntityFramework.xml
+c:\users\developer.acerv5-400\documents\visual studio 2013\Projects\PruebasWeb\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\developer.acerv5-400\documents\visual studio 2013\Projects\PruebasWeb\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+c:\users\developer.acerv5-400\documents\visual studio 2013\Projects\PruebasWeb\DataAccess\obj\Debug\DataAccess.dll
+c:\users\developer.acerv5-400\documents\visual studio 2013\Projects\PruebasWeb\DataAccess\obj\Debug\DataAccess.pdb
