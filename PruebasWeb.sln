@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossDomain", "CrossDomain\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegistroIdentity", "RegistroIdentity\RegistroIdentity.csproj", "{1754B4B3-D434-40EB-942B-722DE1ECB667}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPIRouting", "WebAPIRouting\WebAPIRouting.csproj", "{4A43B098-582E-4703-B564-9D353C4A709A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{1754B4B3-D434-40EB-942B-722DE1ECB667}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1754B4B3-D434-40EB-942B-722DE1ECB667}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1754B4B3-D434-40EB-942B-722DE1ECB667}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A43B098-582E-4703-B564-9D353C4A709A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A43B098-582E-4703-B564-9D353C4A709A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A43B098-582E-4703-B564-9D353C4A709A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A43B098-582E-4703-B564-9D353C4A709A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
