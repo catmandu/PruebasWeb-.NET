@@ -10,6 +10,8 @@ using Microsoft.Owin.Security.OAuth;
 using Owin;
 using RegistroIdentity.Providers;
 using RegistroIdentity.Models;
+using Microsoft.Owin.Security.Facebook;
+using RegistroIdentity.Facebook;
 
 namespace RegistroIdentity
 {
@@ -38,7 +40,7 @@ namespace RegistroIdentity
                 TokenEndpointPath = new PathString("/Token"),
                 Provider = new ApplicationOAuthProvider(PublicClientId),
                 AuthorizeEndpointPath = new PathString("/api/Account/ExternalLogin"),
-                AccessTokenExpireTimeSpan = TimeSpan.FromDays(14),
+                AccessTokenExpireTimeSpan = TimeSpan.FromHours(1),
                 // In production mode set AllowInsecureHttp = false
                 AllowInsecureHttp = true
             };
@@ -56,14 +58,25 @@ namespace RegistroIdentity
             //    consumerSecret: "");
 
             //app.UseFacebookAuthentication(
-            //    appId: "",
-            //    appSecret: "");
+            //    appId: "1754689477976927",
+            //    appSecret: "32529a7def39d5d16be0097c3e3fbc87");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            var facebookOptions = new FacebookAuthenticationOptions()
+            {
+                AppId = "1754689477976927",
+                AppSecret = "32529a7def39d5d16be0097c3e3fbc87",
+                BackchannelHttpHandler = new FacebookChannelHandler(),
+                UserInformationEndpoint = "https://graph.facebook.com/v2.4/me?fields=id,email"
+            };
+
+            facebookOptions.Scope.Add("email");
+            app.UseFacebookAuthentication(facebookOptions);
+
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "375810314695-r2efstuavvv6h0i9hj6khcstfba8n7bc.apps.googleusercontent.com",
+                ClientSecret = "3dXJTp265FbIBMmwkX2dyM0S"
+            });
         }
     }
 }
